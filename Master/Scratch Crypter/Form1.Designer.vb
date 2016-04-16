@@ -36,13 +36,13 @@ Partial Class Form1
         '
         Me.TextBox1.Location = New System.Drawing.Point(12, 12)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(219, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(275, 20)
         Me.TextBox1.TabIndex = 0
         '
         'Button1
         '
         Me.Button1.AccessibleRole = System.Windows.Forms.AccessibleRole.Equation
-        Me.Button1.Location = New System.Drawing.Point(237, 12)
+        Me.Button1.Location = New System.Drawing.Point(293, 12)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(68, 20)
         Me.Button1.TabIndex = 2
@@ -53,7 +53,7 @@ Partial Class Form1
         '
         Me.Button3.Location = New System.Drawing.Point(12, 90)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(292, 22)
+        Me.Button3.Size = New System.Drawing.Size(348, 22)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "Slap Them Titties"
         Me.Button3.UseVisualStyleBackColor = True
@@ -62,12 +62,12 @@ Partial Class Form1
         '
         Me.TextBox3.Location = New System.Drawing.Point(12, 38)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(219, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(274, 20)
         Me.TextBox3.TabIndex = 5
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(236, 37)
+        Me.Button4.Location = New System.Drawing.Point(292, 37)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(68, 20)
         Me.Button4.TabIndex = 6
@@ -76,7 +76,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(237, 64)
+        Me.Button2.Location = New System.Drawing.Point(293, 64)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(68, 20)
         Me.Button2.TabIndex = 8
@@ -87,7 +87,7 @@ Partial Class Form1
         '
         Me.TextBox2.Location = New System.Drawing.Point(12, 64)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(219, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(274, 20)
         Me.TextBox2.TabIndex = 7
         '
         'Form1
@@ -95,7 +95,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(311, 120)
+        Me.ClientSize = New System.Drawing.Size(367, 120)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Button4)

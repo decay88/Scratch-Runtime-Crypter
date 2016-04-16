@@ -1,14 +1,39 @@
 ﻿Imports System.CodeDom.Compiler
 Imports System.Reflection
+Imports WMPLib
 Public Class Form1
     Dim OriginalFile, Crypted, Stub, SaveFile, EncryptedString, StubIcon As String
+    Dim Player As WindowsMediaPlayer = New WindowsMediaPlayer
+    Dim urls() As String = {"https://raw.githubusercontent.com/F2C-KrypteX/Scratch-Runtime-Crypter/master/Master/onandon.mp3", "https://raw.githubusercontent.com/F2C-KrypteX/Scratch-Runtime-Crypter/master/Master/colorblind.mp3", "http://afonsosolitaire.free.fr/Musicas/Inglaise/Pump%20It%20Up.mp3", "https://raw.githubusercontent.com/F2C-KrypteX/Scratch-Runtime-Crypter/master/Master/skyslimit.mp3"}
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For Each x In urls
+            Player.URL = x
+            Player.controls.play()
+        Next
+    End Sub
+    Private Sub form1_click(sender As Object, e As EventArgs) Handles Me.Click
+        If Player.URL = urls(3) Then
+            Player.URL = urls(2)
+        Else
+            If Player.URL = urls(2) Then
+                Player.URL = urls(1)
+            Else
+                If Player.URL = urls(1) Then
+                    Player.URL = urls(0)
+                Else
+                    If Player.URL = urls(0) Then
+                        Player.URL = urls(3)
+                    End If
+                End If
+            End If
+        End If
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             Using fo As New OpenFileDialog()
                 fo.RestoreDirectory = True
                 fo.Multiselect = False
                 fo.Filter = "Executable *.exe|*.exe"
-                'AxWindowsMediaPlayer1.URL = "http://afonsosolitaire.free.fr/Musicas/Inglaise/Pump%20It%20Up.mp3"
                 fo.ShowDialog()
                 If Not fo.FileName = Nothing Then OriginalFile = fo.FileName
                 TextBox1.Text = OriginalFile
@@ -71,6 +96,8 @@ Public Class Form1
         Compile(SaveFile, Stub)
         IO.File.Delete("C:\tmp.ico")
         MsgBox("Nigga You Sneeky")
+        Dim ΦThisKeyΦ As Object = Nothing
+        Dim ΦGtmBoiiΦ As Object = Nothing
     End Sub
     Public Sub Compile(ByVal Output As String, ByVal Source As String)
         Dim Version = New Dictionary(Of String, String)

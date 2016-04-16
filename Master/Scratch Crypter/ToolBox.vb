@@ -64,7 +64,6 @@ Public Class ToolBox
     End Function
     Public Shared Function format(ByVal input As String) As String ' Codedom has maximum of possible chars per line so we are storing the string in multiple strings
         Dim out As New System.Text.StringBuilder ' Declaring a new StringBuilder to store the output string
-        'Dim base64data As String = Convert.ToBase64String(input) ' Get a readable String from the Byte Array
         Dim arr As String() = SplitString(input, 1500) ' Split the string into parts to fit in the Codedom-lines
         For i As Integer = 0 To arr.Length - 1 ' Looping thought each string in the array
             If i = arr.Length - 1 Then  ' If i equals the highest number
